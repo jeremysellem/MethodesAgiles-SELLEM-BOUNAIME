@@ -1,0 +1,4 @@
+# ignore generated html files,
+.idea
+.pytest_cache
+.DS_Store
