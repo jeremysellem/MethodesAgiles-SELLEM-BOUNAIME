@@ -10,11 +10,11 @@ class TraderBnp:
     def get_daily_yield(self):
         return self.daily_yield
 
-    def set_daily_yield(self, val):
-        self.daily_yield = val
+    def set_daily_yield(self, val: float):
+        self.daily_yield = float(val)
 
-    def add_to_daily_yield(self, b):
-        self.daily_yield += b
+    def add_to_daily_yield(self, b: float):
+        self.daily_yield += float(b)
     
     def update_pnl_trader_chef(self):
         self.trader_chef.add_to_pnl(self.daily_yield)
