@@ -1,4 +1,4 @@
-Feature: Ajouter un Trader
+Feature: Mettre a jour mon dailyYield
   As a BnpTrader
   Je veux ajouter un nouveau Trader à la liste des traders existants
 

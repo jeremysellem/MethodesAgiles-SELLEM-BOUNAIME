@@ -1,5 +1,5 @@
 from behave import *
-import Trader
+from classe_cible import TraderChef
 from dataclasses import dataclass
 
 @dataclass
