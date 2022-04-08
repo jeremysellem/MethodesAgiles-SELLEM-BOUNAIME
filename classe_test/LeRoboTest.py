@@ -1,10 +1,5 @@
 import unittest
-from LeRobo import LeRobo
-from Engine import Engine
-from InstaBo import InstaBo
-import sys
-import subprocess
-
+from classe_cible import LeRobo, InstaBo
 
 class LeRoboTest(unittest.TestCase):
 

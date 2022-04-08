@@ -1,5 +1,4 @@
-from Engine import Engine
-from InstaBo import InstaBo
+from classe_cible import Engine, InstaBo
 from dataclasses import dataclass
 
 @dataclass
@@ -42,7 +41,7 @@ class LeRobo:
     def get_oil_level(self):
         return self._oil_level
 
-    def get_engine(self, engine:Engine):
+    def get_engine(self, engine: Engine):
         self.engine = engine
 
     def ready_to_walk(self):

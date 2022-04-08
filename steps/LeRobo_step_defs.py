@@ -1,8 +1,7 @@
-from LeRobo import LeRobo
-from InstaBo import InstaBo
+from classe_cible.LeRobo import LeRobo
+from classe_cible.InstaBo import InstaBo
 from behave import *
 from dataclasses import dataclass
-
 
 @dataclass
 class ManageLeRoboSteps:
