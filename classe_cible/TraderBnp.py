@@ -18,5 +18,6 @@ class TraderBnp:
     
     def update_pnl_trader_chef(self):
         self.trader_chef.add_to_pnl(self.daily_yield)
+        self.daily_yield = 0
     
     

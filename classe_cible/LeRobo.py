@@ -2,7 +2,7 @@ from classe_cible import Engine, InstaBo
 from dataclasses import dataclass
 
 @dataclass
-class LeRobo:
+class LeRobo():
 
     def __init__(self):
         self._name = "unknown"
