@@ -1,10 +1,13 @@
 from classe_cible import Engine, InstaBo
 from dataclasses import dataclass
+from classe_cible import TraderBnp
+from design_patterns import ObservateurDP
 
 @dataclass
-class LeRobo():
+class LeRobo(TraderBnp.TraderBnp):
 
     def __init__(self):
+        super().__init__()
         self._name = "unknown"
         self._oil_level = 100
         self._is_alive = True
