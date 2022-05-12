@@ -21,12 +21,6 @@ class TraderChef(ObservateurDP.Observer):
     def add_new_trader(self, new_trader):
         self.traders.append(new_trader)
 
-    def update_pnl(self):
-        new_pnl = 0
-        for t in self.traders:
-            new_pnl += t.get_daily_yield()
-        self.set_pnl(new_pnl)
-
     def notify(self, observed):
         new_pnl = self.get_pnl() + observed
         self.set_pnl(new_pnl)

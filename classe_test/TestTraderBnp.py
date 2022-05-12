@@ -3,9 +3,9 @@ from classe_cible.TraderBnp import TraderBnp
 
 class TestTraderBnp:
 
-    # Attributs : un TraderChef et un TraderBnp qui va lui remonter son daily yield
-    trader_chef = TraderChef()
-    trader_bnp = TraderBnp(trader_chef)
+    # Attribut : un TraderBnp
+    trader_bnp = TraderBnp()
+    
 
     def test_get_daily_yield(self):
 
@@ -31,15 +31,13 @@ class TestTraderBnp:
         # On vérifie (0 + 8 = 8)
         assert self.trader_bnp.get_daily_yield() == 8
 
-    def test_update_pnl_trader_chef(self):
+    def test_notify_observers(self):
 
         # On met le daily_yield à 13 pour que le test soit indépendant
         self.trader_bnp.set_daily_yield(13)
 
-        # On met à jour le PnL du chef à partir du daily_yield courant (13)
-        self.trader_bnp.update_pnl_trader_chef()
-
-        # On vérifie que le PnL du chef est bien passé de 0 à 13
-        assert self.trader_chef.get_pnl() == 13
+        self.trader_bnp.notify_observers()
+        # On vérifie que le PnL du trader est bien passé de 13 à 0
+        assert self.trader_bnp.get_daily_yield() == 0
 
 

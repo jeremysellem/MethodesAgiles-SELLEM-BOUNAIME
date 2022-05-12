@@ -17,10 +17,6 @@ class TraderBnp(ObservateurDP.Observable):
 
     def add_to_daily_yield(self, b: float):
         self.daily_yield += float(b)
-    
-    def update_pnl_trader_chef(self):
-        self.trader_chef.add_to_pnl(self.daily_yield)
-        self.daily_yield = 0
 
     def notify_observers(self):
         for observer in self._observers :
