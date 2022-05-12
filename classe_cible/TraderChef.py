@@ -27,7 +27,7 @@ class TraderChef(ObservateurDP.Observer):
             new_pnl += t.get_daily_yield()
         self.set_pnl(new_pnl)
 
-    def notify(self, observable, observed):
+    def notify(self, observed):
         new_pnl = self.get_pnl() + observed
         self.set_pnl(new_pnl)
         print("J'ai reçu un PnL de {}% de la part d'un trader, le PnL total est maintenant de {}%".format(observed*100, new_pnl*100))
