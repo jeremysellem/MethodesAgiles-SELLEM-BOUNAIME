@@ -24,7 +24,7 @@ class TraderBnp(ObservateurDP.Observable):
 
     def notify_observers(self):
         for observer in self._observers :
-            observer.notify(self, self.daily_yield)
+            observer.notify(self.daily_yield)
         self.daily_yield = 0
     
     
