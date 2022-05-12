@@ -57,4 +57,3 @@ class TestTraderChef:
         # Somme des deux traders dans ma liste (1 + 2 = 3)
         assert self.trader_chef.get_pnl() == 3
     
-

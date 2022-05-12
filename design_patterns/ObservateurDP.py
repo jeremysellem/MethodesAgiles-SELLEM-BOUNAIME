@@ -6,6 +6,7 @@ class Observer:
     def notify(self, observable, observed):
         print ('Got {} from {}'.format(observed, observable))
 
+
 class Observable:
 
     def __init__(self):

@@ -1,5 +1,7 @@
 import unittest
-from classe_cible import LeRobo, InstaBo
+from classe_cible.LeRobo import LeRobo
+from classe_cible.InstaBo import InstaBo
+
 
 class LeRoboTest(unittest.TestCase):
 
