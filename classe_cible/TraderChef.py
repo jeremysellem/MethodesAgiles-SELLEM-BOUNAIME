@@ -8,6 +8,7 @@ class TraderChef(ObservateurDP.Observer):
         self.pnl = None
         self.set_pnl(0)
         self.traders = []
+        self.traders.append(trader)
 
     def get_pnl(self):
         return self.pnl
@@ -25,3 +26,9 @@ class TraderChef(ObservateurDP.Observer):
         new_pnl = self.get_pnl() + observed
         self.set_pnl(new_pnl)
         print("J'ai reçu un PnL de {}% de la part d'un trader, le PnL total est maintenant de {}%".format(observed*100, new_pnl*100))
+
+    def update_pnl(self):
+        pnl = 0
+        for trader in self.traders:
+            pnl += trader.get_daily_yield()
+            self.set_pnl(pnl)

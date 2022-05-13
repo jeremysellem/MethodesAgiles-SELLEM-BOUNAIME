@@ -9,9 +9,10 @@ class ManageUpdatePnLSteps:
 
     @given(u'Un TraderChef et sa liste de traders')
     def un_trader_chef(self):
-        self._trader_chef = TraderChef()
-        trader_bnp1 = TraderBnp(self._trader_chef)
-        trader_bnp2 = TraderBnp(self._trader_chef)
+        trader_bnp1 = TraderBnp()
+        trader_bnp2 = TraderBnp()
+        self._trader_chef = TraderChef(trader_bnp1)
+        self._trader_chef.add_new_trader(trader_bnp2)
         trader_bnp1.set_daily_yield(3)
         trader_bnp2.set_daily_yield(7)
 
